@@ -1,0 +1,95 @@
+.navbar{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:20px 40px;
+background:white;
+border-radius:18px;
+box-shadow:0 8px 20px rgba(0,0,0,.08);
+margin-bottom:35px;
+}
+
+.logo{
+font-size:28px;
+font-weight:700;
+color:#2563eb;
+}
+
+.nav-links{
+display:flex;
+gap:35px;
+list-style:none;
+}
+
+.nav-links li{
+font-size:18px;
+font-weight:600;
+cursor:pointer;
+color:#555;
+transition:.3s;
+}
+
+.nav-links li:hover{
+color:#2563eb;
+}
+
+.active{
+color:#2563eb!important;
+}
+
+.profile{
+background:#2563eb;
+color:white;
+padding:12px 22px;
+border-radius:30px;
+font-weight:bold;
+font-size:17px;
+cursor:pointer;
+transition:.3s;
+}
+
+.profile:hover{
+background:#1d4ed8;
+transform:scale(1.05);
+}
+
+/* Add these lines */
+.nav-links a{
+text-decoration:none;
+color:inherit;
+}
+
+.nav-links a:hover{
+color:#2563eb;
+}
+
+.nav-links a.active{
+color:#2563eb;
+}
+.profile-container{
+  position:relative;
+}
+
+.dropdown-menu{
+  position:absolute;
+  top:60px;
+  right:0;
+  background:white;
+  border-radius:12px;
+  padding:10px;
+  box-shadow:0 5px 15px rgba(0,0,0,.15);
+}
+
+.logout-btn{
+  border:none;
+  background:#ef4444;
+  color:white;
+  padding:10px 20px;
+  border-radius:10px;
+  cursor:pointer;
+  font-weight:bold;
+}
+
+.logout-btn:hover{
+  background:#dc2626;
+}

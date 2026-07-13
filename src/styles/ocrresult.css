@@ -1,0 +1,48 @@
+.ocr-container{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    min-height:100vh;
+    background:#eef4ff;
+}
+
+.ocr-card{
+    width:420px;
+    background:white;
+    padding:30px;
+    border-radius:15px;
+    box-shadow:0 5px 20px rgba(0,0,0,.15);
+}
+
+.ocr-card h1{
+    text-align:center;
+    margin-bottom:25px;
+}
+
+.field{
+    display:flex;
+    flex-direction:column;
+    margin-bottom:20px;
+}
+
+.field label{
+    margin-bottom:6px;
+    font-weight:bold;
+}
+
+.field input{
+    padding:10px;
+    border:1px solid #ccc;
+    border-radius:8px;
+}
+
+.save-btn{
+    width:100%;
+    padding:12px;
+    border:none;
+    border-radius:8px;
+    background:#2563eb;
+    color:white;
+    font-size:16px;
+    cursor:pointer;
+}

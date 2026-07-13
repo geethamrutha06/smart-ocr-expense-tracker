@@ -1,0 +1,77 @@
+.upload-box{
+background:white;
+padding:40px;
+margin-top:40px;
+border-radius:20px;
+text-align:center;
+box-shadow:0 10px 25px rgba(0,0,0,.08);
+border:3px dashed #2563eb;
+}
+
+.upload-icon{
+font-size:60px;
+margin-bottom:15px;
+}
+
+.upload-box h2{
+color:#2563eb;
+margin-bottom:10px;
+}
+
+.upload-box p{
+color:#666;
+margin-bottom:20px;
+}
+
+.choose-btn{
+background:#2563eb;
+color:white;
+padding:14px 30px;
+border:none;
+border-radius:10px;
+cursor:pointer;
+font-size:17px;
+transition:.3s;
+}
+
+.choose-btn:hover{
+background:#1d4ed8;
+}
+
+.filename{
+margin-top:20px;
+font-weight:bold;
+color:#333;
+}
+
+.preview{
+margin-top:30px;
+}
+
+.preview h3{
+color:#2563eb;
+margin-bottom:15px;
+}
+
+.preview-image{
+width:320px;
+max-width:100%;
+border-radius:12px;
+box-shadow:0 5px 15px rgba(0,0,0,.15);
+margin-bottom:20px;
+}
+
+.extract-btn{
+background:#00b894;
+color:white;
+padding:14px 30px;
+border:none;
+border-radius:10px;
+font-size:17px;
+cursor:pointer;
+transition:.3s;
+}
+
+.extract-btn:hover{
+background:#019875;
+}
