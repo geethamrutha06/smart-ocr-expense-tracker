@@ -1,16 +1,108 @@
-# React + Vite
+# Smart OCR Expense Tracker
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A serverless expense tracking application that extracts receipt details using Amazon Textract and stores expenses in DynamoDB. The application provides a simple dashboard for uploading receipts and viewing expense history.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- Upload receipt images
+- OCR using Amazon Textract
+- Automatic extraction of:
+  - Merchant
+  - Total Amount
+  - Date
+  - Category
+- Store expenses in Amazon DynamoDB
+- Expense History
+- Monthly Expense Summary
+- Responsive React UI
+- Serverless AWS Backend
 
-## React Compiler
+## Tech Stack
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+### Frontend
+- React
+- Vite
+- JavaScript
+- CSS
 
-## Expanding the ESLint configuration
+### Backend
+- AWS Lambda
+- Amazon API Gateway
+- Amazon Textract
+- Amazon DynamoDB
+- Amazon S3
+- Amazon SNS
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## AWS Services Used
+
+- Amazon S3 – Stores uploaded receipt images
+- Amazon Textract – Extracts text from receipts
+- AWS Lambda – Processes OCR requests
+- Amazon DynamoDB – Stores expense records
+- API Gateway – Exposes REST APIs
+- Amazon SNS – Sends notifications
+
+## Project Structure
+
+```
+smart-ocr-expense-tracker/
+│
+├── src/
+│   ├── components/
+│   ├── pages/
+│   ├── services/
+│   ├── App.jsx
+│   └── main.jsx
+│
+├── public/
+├── package.json
+├── vite.config.js
+└── README.md
+```
+
+## API Endpoints
+
+### POST /ocr
+
+Uploads a receipt image and extracts expense information.
+
+### GET /summary
+
+Returns monthly expense summary including:
+
+- Total Expenses
+- Total Receipts
+- Category-wise Expenses
+
+## Workflow
+
+1. User uploads receipt.
+2. React sends image to API Gateway.
+3. API Gateway invokes AWS Lambda.
+4. Lambda uploads image to Amazon S3.
+5. Amazon Textract extracts receipt details.
+6. Lambda stores extracted data in DynamoDB.
+7. Expense history and summary are returned to the frontend.
+
+## Installation
+
+```bash
+npm install
+npm run dev
+```
+
+## Build
+
+```bash
+npm run build
+```
+
+## Future Improvements
+
+- User Authentication
+- Expense Charts
+- PDF Receipt Support
+- Expense Filters
+- Export Reports
+- Budget Tracking
+
