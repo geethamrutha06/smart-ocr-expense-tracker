@@ -106,5 +106,5 @@ npm run build
 - Export Reports
 - Budget Tracking
   
-## DEPLOY:
+## DEPLOYMENT:
 https://6a55014f14d11f2e4c3ed274--tangerine-figolla-ed51e2.netlify.app/
